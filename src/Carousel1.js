@@ -59,7 +59,7 @@ class CarouselSlide extends React.Component {
 						: "carousel__slide"
 				}
 			>
-				<p className="carousel-slide__content">{this.props.slide.content}</p>
+				<p className="carousel-slide__content">{this.props.slide}</p>
 			</li>
 		);
 	}
@@ -88,7 +88,7 @@ export class Carousel1 extends React.Component {
 		e.preventDefault();
 
 		let index = this.state.activeIndex; 	// aktywny slide
-		let { slides } = this.props;			// dekopozycja tablicy slidów z propsów --- plik index.js
+		let { slides } = this.props;			// dekopozycja tablicy slidów z propsów --- plik Main.js
 		let slidesLength = slides.length;
 
 		if (index < 1) {						// gdy jesteśmy na pierwszym slajdzie o indeksie [0]
